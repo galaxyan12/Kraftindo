@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Kraftindo</string>
+    <string name="produk_name">Nama Produk</string>
+    <string name="detail">Detail</string>
+    <string name="Buy">Buy</string>
+    <string-array name="bentuk">
+        <item>Bulat</item>
+        <item>Persegi</item>
+        <item>Segitiga</item>
+        <item>Bintang</item>
+    </string-array>
+    <string-array name="tinggi">
+        <item>100cm</item>
+        <item>200cm</item>
+        <item>300cm</item>
+        <item>400cm</item>
+    </string-array>
+    <string name="lorem">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Eleifend quam adipiscing vitae proin sagittis nisl. Non arcu risus quis varius quam quisque id. Nunc consequat interdum varius sit amet mattis vulputate. In vitae turpis massa sed elementum tempus egestas sed sed. Semper feugiat nibh sed pulvinar proin gravida hendrerit. Tellus mauris a diam maecenas sed.</string>
+</resources>
