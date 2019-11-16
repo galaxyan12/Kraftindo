@@ -22,6 +22,10 @@ import java.util.ArrayList;
 public class ProdukAdapter extends RecyclerView.Adapter<ProdukAdapter.ProdukViewHolder> {
     private ArrayList<Produk> listProduk;
 
+    public ProdukAdapter(ArrayList<Produk> list) {
+        this.listProduk = list;
+    }
+
     @NonNull
     @Override
     public ProdukViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int viewType) {

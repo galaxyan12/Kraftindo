@@ -24,7 +24,7 @@ public class ProdukData {
             R.drawable.tikarpandan
     };
 
-    static ArrayList<Produk> getListData() {
+    public static ArrayList<Produk> getListData() {
         ArrayList<Produk> list = new ArrayList<>();
         for (int position = 0; position < produkNames.length; position++) {
             Produk produk = new Produk();
