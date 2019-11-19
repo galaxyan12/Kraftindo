@@ -4,6 +4,7 @@
     <color name="colorSecondary">#4C3211</color>
     <color name="colorPrimaryDark">#330D0A</color>
     <color name="colorAccent">#D81B60</color>
+    <color name="textHarga">#FF5722</color>
 
     <color name="primary">#E43F3F</color>
     <color name="primary_dark">#E12929</color>

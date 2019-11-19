@@ -24,12 +24,21 @@ public class ProdukData {
             R.drawable.tikarpandan
     };
 
+    private static String[] produkHarga = {
+            "Rp. 125.000",
+            "Rp. 50.000",
+            "Rp. 250.000",
+            "Rp. 200.000"
+
+    };
+
     public static ArrayList<Produk> getListData() {
         ArrayList<Produk> list = new ArrayList<>();
         for (int position = 0; position < produkNames.length; position++) {
             Produk produk = new Produk();
             produk.setName(produkNames[position]);
             produk.setDetail(produkDetail[position]);
+            produk.setHarga(produkHarga[position]);
             produk.setPhoto(produkImages[position]);
             list.add(produk);
         }

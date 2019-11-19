@@ -3,6 +3,7 @@ package com.ppsi.kraftindo;
 public class Produk {
     private String name;
     private String detail;
+    private String harga;
     private int photo;
 
     public String getName() {
@@ -27,5 +28,13 @@ public class Produk {
 
     public void setPhoto(int photo) {
         this.photo = photo;
+    }
+
+    public String getHarga() {
+        return harga;
+    }
+
+    public void setHarga(String harga) {
+        this.harga = harga;
     }
 }

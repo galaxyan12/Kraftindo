@@ -44,12 +44,13 @@
                     android:textSize="24sp"/>
 
                 <TextView
+                    android:id="@+id/tv_harga_produk"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Rp 100.000"
                     android:textSize="18sp"
                     android:textStyle="bold"
-                    android:textColor="#FF5722"/>
+                    android:textColor="@color/textHarga" />
 
                 <TextView
                     android:layout_width="match_parent"

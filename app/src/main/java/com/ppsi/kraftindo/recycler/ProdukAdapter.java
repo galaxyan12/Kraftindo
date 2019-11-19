@@ -44,15 +44,14 @@ public class ProdukAdapter extends RecyclerView.Adapter<ProdukAdapter.ProdukView
 
         holder.tvName.setText(produk.getName());
         holder.tvDetail.setText(produk.getDetail());
-        holder.btnDetail.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent moveIntent = new Intent(holder.itemView.getContext(), DetailActivity.class);
-                moveIntent.putExtra(DetailActivity.PRODUK_NAME, produk.getName());
-                moveIntent.putExtra(DetailActivity.PRODUK_DETAIL, produk.getDetail());
-                moveIntent.putExtra("photo", listProduk.get(position).getPhoto());
-                holder.itemView.getContext().startActivity(moveIntent);
-            }
+        holder.tvHarga.setText(produk.getHarga());
+        holder.btnDetail.setOnClickListener(v -> {
+            Intent moveIntent = new Intent(holder.itemView.getContext(), DetailActivity.class);
+            moveIntent.putExtra(DetailActivity.PRODUK_NAME, produk.getName());
+            moveIntent.putExtra(DetailActivity.PRODUK_DETAIL, produk.getDetail());
+            moveIntent.putExtra(DetailActivity.PRODUK_PRICE, produk.getHarga());
+            moveIntent.putExtra("photo", listProduk.get(position).getPhoto());
+            holder.itemView.getContext().startActivity(moveIntent);
         });
     }
 
@@ -63,7 +62,7 @@ public class ProdukAdapter extends RecyclerView.Adapter<ProdukAdapter.ProdukView
 
     public class ProdukViewHolder extends RecyclerView.ViewHolder {
         ImageView imgPhoto;
-        TextView tvName, tvDetail;
+        TextView tvName, tvDetail, tvHarga;
         Button btnBuy, btnDetail;
 
         ProdukViewHolder(View itemView){
@@ -71,6 +70,7 @@ public class ProdukAdapter extends RecyclerView.Adapter<ProdukAdapter.ProdukView
             imgPhoto = itemView.findViewById(R.id.img_item_photo);
             tvName = itemView.findViewById(R.id.tv_item_name);
             tvDetail = itemView.findViewById(R.id.tv_item_detail);
+            tvHarga = itemView.findViewById(R.id.tv_item_price);
             btnBuy = itemView.findViewById(R.id.btn_set_buy);
             btnDetail = itemView.findViewById(R.id.btn_set_detail);
         }
