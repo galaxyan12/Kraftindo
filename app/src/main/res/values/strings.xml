@@ -9,11 +9,19 @@
         <item>Segitiga</item>
         <item>Bintang</item>
     </string-array>
-    <string-array name="tinggi">
-        <item>100cm</item>
-        <item>200cm</item>
-        <item>300cm</item>
-        <item>400cm</item>
+    <string-array name="ukuran">
+        <item>100cm x 150cm</item>
+        <item>200cm x 300cm</item>
+        <item>300cm x 150cm</item>
+        <item>400cm x 200cm</item>
+    </string-array>
+    <string-array name="warna_custom">
+        <item>Coklat</item>
+        <item>Biru</item>
+        <item>Merah</item>
+        <item>Hijau</item>
+        <item>Kuning</item>
+        <item>Abu - Abu</item>
     </string-array>
     <string name="lorem">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Eleifend quam adipiscing vitae proin sagittis nisl. Non arcu risus quis varius quam quisque id. Nunc consequat interdum varius sit amet mattis vulputate. In vitae turpis massa sed elementum tempus egestas sed sed. Semper feugiat nibh sed pulvinar proin gravida hendrerit. Tellus mauris a diam maecenas sed.</string>
 </resources>

@@ -15,15 +15,25 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <EditText
-        android:id="@+id/ubah_warna"
+    <TextView
+        android:id="@+id/textUbahWarna"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:hint="Ubah Warna"
+        android:text="Ubah Warna"
+        android:layout_marginTop="16dp"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@+id/tambah_tulisan"
+        tools:layout_editor_absoluteX="52dp" />
+
+    <Spinner
+        android:id="@+id/spinner_warna"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:entries="@array/warna_custom"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tambah_tulisan" />
+        app:layout_constraintTop_toBottomOf="@+id/textUbahWarna" />
 
     <TextView
         android:id="@+id/textView"
@@ -32,7 +42,7 @@
         android:layout_marginTop="16dp"
         android:text="Bentuk Produk"
         android:textSize="18sp"
-        app:layout_constraintTop_toBottomOf="@+id/ubah_warna"
+        app:layout_constraintTop_toBottomOf="@+id/spinner_warna"
         tools:layout_editor_absoluteX="34dp" />
 
     <Spinner
@@ -62,7 +72,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:autofillHints="Ukuran Produk"
-        android:entries="@array/tinggi"
+        android:entries="@array/ukuran"
         android:tooltipText="Ukuran Produk"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.968"

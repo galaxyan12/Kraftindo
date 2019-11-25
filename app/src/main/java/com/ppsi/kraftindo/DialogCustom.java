@@ -14,7 +14,6 @@ import androidx.appcompat.app.AppCompatDialogFragment;
 
 public class DialogCustom extends AppCompatDialogFragment {
     private EditText editTulisan;
-    private EditText editWarna;
 
     @NonNull
     @Override
@@ -25,20 +24,13 @@ public class DialogCustom extends AppCompatDialogFragment {
         View view = inflater.inflate(R.layout.custom_dialog, null);
         builder.setView(view)
                 .setTitle("Custom")
-                .setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
+                .setNegativeButton("Cancel", (dialog, which) -> {
 
-                    }
                 })
-                .setPositiveButton("OK", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
+                .setPositiveButton("OK", (dialog, which) -> {
 
-                    }
                 });
         editTulisan = view.findViewById(R.id.tambah_tulisan);
-        editWarna = view.findViewById(R.id.ubah_warna);
 
         return builder.create();
     }
