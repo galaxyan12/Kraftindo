@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
@@ -8,6 +9,7 @@
         android:id="@+id/layout_total"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
         android:padding="5dp"
         android:weightSum="2">
 
@@ -29,13 +31,80 @@
 
     </LinearLayout>
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recycler_cart"
+    <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_above="@+id/btn_placeorder"
-        android:layout_below="@+id/layout_total"
-        tools:listitem="@layout/item_cart" />
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:id="@+id/cart_item_satu"
+        android:layout_below="@id/layout_total"
+        app:cardCornerRadius="4dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="10dp"
+            android:weightSum="7">
+
+            <CheckBox
+                android:layout_width="20dp"
+                android:buttonTint="@color/colorPrimary"
+                android:layout_weight="1"
+                android:layout_height="20dp" />
+
+            <TextView
+                android:id="@+id/cart_item_name"
+                android:layout_marginLeft="4dp"
+                android:layout_width="90dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Nama Produk"
+                android:textSize="13sp" />
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:textSize="13sp"
+                android:text="Rp 100.000"
+                android:textAlignment="center"
+                android:layout_weight="1"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:id="@+id/cart_item_price" />
+
+            <ImageView
+                android:id="@+id/cart_item_min"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/ic_minus"
+                android:layout_weight="1" />
+
+            <TextView
+                android:layout_width="20dp"
+                android:id="@+id/cart_item_counter"
+                android:layout_height="wrap_content"
+                android:text="1"
+                android:layout_weight="1"
+                android:textAlignment="center" />
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/ic_plus"
+                android:layout_weight="1"
+                android:id="@+id/cart_item_plus" />
+
+            <ImageView
+                android:id="@+id/cart_item_trash"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginLeft="8dp"
+                android:src="@drawable/ic_trash"
+                android:layout_weight="1" />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
 
     <Button
         android:id="@+id/btn_placeorder"
@@ -44,7 +113,7 @@
         android:layout_alignParentBottom="true"
         android:layout_gravity="center"
         android:background="@color/colorPrimaryDark"
-        android:text="Place Order"
+        android:text="Checkout"
         android:textColor="@color/textWhite" />
 
 </RelativeLayout>

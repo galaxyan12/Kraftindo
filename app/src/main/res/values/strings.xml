@@ -3,6 +3,7 @@
     <string name="produk_name">Nama Produk</string>
     <string name="detail">Detail</string>
     <string name="Buy">Buy</string>
+    <string name="add_cart">Add to Cart</string>
     <string-array name="bentuk">
         <item>Bulat</item>
         <item>Persegi</item>

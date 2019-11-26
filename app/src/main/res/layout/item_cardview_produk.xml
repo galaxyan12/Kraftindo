@@ -17,8 +17,8 @@
 
         <ImageView
             android:id="@+id/img_item_photo"
-            android:layout_width="150dp"
-            android:layout_height="220dp"
+            android:layout_width="130dp"
+            android:layout_height="200dp"
             android:layout_marginBottom="4dp"
             android:background="@color/colorPrimary"
             android:scaleType="centerCrop" />
@@ -79,13 +79,13 @@
             android:orientation="horizontal">
 
             <Button
-                android:id="@+id/btn_set_buy"
+                android:id="@+id/btn_set_cart"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="2dp"
                 android:layout_weight="1"
                 android:background="@color/colorPrimary"
-                android:text="@string/Buy"
+                android:text="@string/add_cart"
                 android:textColor="@color/textWhite"
                 android:textSize="12sp" />
 

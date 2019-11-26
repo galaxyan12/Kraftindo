@@ -1,12 +1,14 @@
 package com.ppsi.kraftindo.recycler;
 
 import android.content.Intent;
+import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -16,6 +18,7 @@ import com.bumptech.glide.request.RequestOptions;
 import com.ppsi.kraftindo.DetailActivity;
 import com.ppsi.kraftindo.Produk;
 import com.ppsi.kraftindo.R;
+import com.ppsi.kraftindo.fragment.FeedFragment;
 
 import java.util.ArrayList;
 
@@ -45,6 +48,11 @@ public class ProdukAdapter extends RecyclerView.Adapter<ProdukAdapter.ProdukView
         holder.tvName.setText(produk.getName());
         holder.tvDetail.setText(produk.getDetail());
         holder.tvHarga.setText(produk.getHarga());
+        holder.btnAddCart.setOnClickListener(v -> {
+            FeedFragment.cartNamaProduk = produk.getName();
+            FeedFragment.cartHargaProduk = produk.getHarga();
+            Toast.makeText(v.getContext(), "Added to cart", Toast.LENGTH_SHORT).show();
+        });
         holder.btnDetail.setOnClickListener(v -> {
             Intent moveIntent = new Intent(holder.itemView.getContext(), DetailActivity.class);
             moveIntent.putExtra(DetailActivity.PRODUK_NAME, produk.getName());
@@ -63,7 +71,7 @@ public class ProdukAdapter extends RecyclerView.Adapter<ProdukAdapter.ProdukView
     public class ProdukViewHolder extends RecyclerView.ViewHolder {
         ImageView imgPhoto;
         TextView tvName, tvDetail, tvHarga;
-        Button btnBuy, btnDetail;
+        Button btnAddCart, btnDetail;
 
         ProdukViewHolder(View itemView){
             super(itemView);
@@ -71,7 +79,7 @@ public class ProdukAdapter extends RecyclerView.Adapter<ProdukAdapter.ProdukView
             tvName = itemView.findViewById(R.id.tv_item_name);
             tvDetail = itemView.findViewById(R.id.tv_item_detail);
             tvHarga = itemView.findViewById(R.id.tv_item_price);
-            btnBuy = itemView.findViewById(R.id.btn_set_buy);
+            btnAddCart = itemView.findViewById(R.id.btn_set_cart);
             btnDetail = itemView.findViewById(R.id.btn_set_detail);
         }
     }
