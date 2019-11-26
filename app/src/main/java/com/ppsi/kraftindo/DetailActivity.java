@@ -7,6 +7,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import com.ppsi.kraftindo.fragment.FeedFragment;
 
 public class DetailActivity extends AppCompatActivity {
 
@@ -23,6 +26,8 @@ public class DetailActivity extends AppCompatActivity {
         TextView tvHargaProduk = findViewById(R.id.tv_harga_produk);
         ImageView ivPhotoProduk = findViewById(R.id.iv_photo_produk);
         Button btCustom = findViewById(R.id.button_custom);
+        Button btAddCart = findViewById(R.id.button_addcart);
+
         btCustom.setOnClickListener(v -> openDialogCustom());
 
         String mNamaProduk = getIntent().getStringExtra(PRODUK_NAME);
@@ -34,6 +39,12 @@ public class DetailActivity extends AppCompatActivity {
         tvDetialProduk.setText(mDetailProduk);
         tvHargaProduk.setText(mHargaProduk);
         ivPhotoProduk.setImageResource(mPhotoProduk);
+
+        btAddCart.setOnClickListener(v -> {
+            FeedFragment.cartNamaProduk = mNamaProduk;
+            FeedFragment.cartHargaProduk = mHargaProduk;
+            Toast.makeText(getApplicationContext(), "Added to cart", Toast.LENGTH_SHORT).show();
+        });
     }
 
     public void openDialogCustom() {

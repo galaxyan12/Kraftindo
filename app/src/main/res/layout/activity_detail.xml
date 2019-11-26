@@ -195,6 +195,7 @@
                 android:padding="8dp">
 
                 <Button
+                    android:id="@+id/button_addcart"
                     android:layout_width="30dp"
                     android:textColor="@color/textWhite"
                     android:layout_height="wrap_content"
