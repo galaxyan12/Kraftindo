@@ -1,7 +1,6 @@
 package com.ppsi.kraftindo.recycler;
 
 import android.content.Intent;
-import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,7 +17,7 @@ import com.bumptech.glide.request.RequestOptions;
 import com.ppsi.kraftindo.DetailActivity;
 import com.ppsi.kraftindo.Produk;
 import com.ppsi.kraftindo.R;
-import com.ppsi.kraftindo.fragment.FeedFragment;
+import com.ppsi.kraftindo.fragment.CartFragment;
 
 import java.util.ArrayList;
 
@@ -49,8 +48,8 @@ public class ProdukAdapter extends RecyclerView.Adapter<ProdukAdapter.ProdukView
         holder.tvDetail.setText(produk.getDetail());
         holder.tvHarga.setText(produk.getHarga());
         holder.btnAddCart.setOnClickListener(v -> {
-            FeedFragment.cartNamaProduk = produk.getName();
-            FeedFragment.cartHargaProduk = produk.getHarga();
+            CartFragment.cartNamaProduk = produk.getName();
+            CartFragment.cartHargaProduk = produk.getHarga();
             Toast.makeText(v.getContext(), "Added to cart", Toast.LENGTH_SHORT).show();
         });
         holder.btnDetail.setOnClickListener(v -> {

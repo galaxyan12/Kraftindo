@@ -13,16 +13,18 @@ import androidx.fragment.app.Fragment;
 
 import com.ppsi.kraftindo.R;
 
-public class FeedFragment extends Fragment {
+public class CartFragment extends Fragment {
 
     public static String cartNamaProduk = "";
     public static String cartHargaProduk = "";
     int cartCounter = 0;
+    int totalResult = 0;
+    int preTotal = Integer.parseInt(cartHargaProduk);
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View v = inflater.inflate(R.layout.fragment_feed, container, false);
+        View v = inflater.inflate(R.layout.fragment_cart, container, false);
         TextView tv_cartName = v.findViewById(R.id.cart_item_name);
         TextView tv_cartPrice = v.findViewById(R.id.cart_item_price);
         TextView tv_cartCounter = v.findViewById(R.id.cart_item_counter);
@@ -34,11 +36,12 @@ public class FeedFragment extends Fragment {
         tv_cartCounter.setText("0");
         tv_cartName.setText(cartNamaProduk);
         tv_cartPrice.setText(cartHargaProduk);
-        tv_Total.setText(cartHargaProduk);
 
         iv_cartPlus.setOnClickListener(v1 -> {
             cartCounter = cartCounter + 1;
             tv_cartCounter.setText(String.valueOf(cartCounter));
+            totalResult = preTotal * cartCounter;
+            tv_Total.setText(String.valueOf(totalResult));
         });
 
         iv_cartMin.setOnClickListener(v1 -> {
@@ -47,10 +50,15 @@ public class FeedFragment extends Fragment {
             if (cartCounter < 0) {
                 cartCounter = 0;
                 tv_cartCounter.setText(String.valueOf(cartCounter));
+                totalResult = preTotal * cartCounter;
+                tv_Total.setText(String.valueOf(totalResult));
             }
         });
 
         iv_cartTrash.setOnClickListener(v12 -> {
+            cartCounter = 0;
+            preTotal = 0;
+            totalResult = 0;
             tv_cartCounter.setText("0");
             tv_cartName.setText("");
             tv_cartPrice.setText("Rp. 0");

@@ -25,10 +25,10 @@ public class ProdukData {
     };
 
     private static String[] produkHarga = {
-            "Rp. 125.000",
-            "Rp. 50.000",
-            "Rp. 250.000",
-            "Rp. 200.000"
+            "25000",
+            "50000",
+            "250000",
+            "200000"
 
     };
 

@@ -3,13 +3,12 @@ package com.ppsi.kraftindo;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.ppsi.kraftindo.fragment.FeedFragment;
+import com.ppsi.kraftindo.fragment.CartFragment;
 
 public class DetailActivity extends AppCompatActivity {
 
@@ -41,8 +40,8 @@ public class DetailActivity extends AppCompatActivity {
         ivPhotoProduk.setImageResource(mPhotoProduk);
 
         btAddCart.setOnClickListener(v -> {
-            FeedFragment.cartNamaProduk = mNamaProduk;
-            FeedFragment.cartHargaProduk = mHargaProduk;
+            CartFragment.cartNamaProduk = mNamaProduk;
+            CartFragment.cartHargaProduk = mHargaProduk;
             Toast.makeText(getApplicationContext(), "Added to cart", Toast.LENGTH_SHORT).show();
         });
     }

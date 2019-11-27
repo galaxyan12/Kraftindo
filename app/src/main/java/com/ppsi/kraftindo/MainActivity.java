@@ -1,14 +1,12 @@
 package com.ppsi.kraftindo;
 
 import android.os.Bundle;
-import android.view.MenuItem;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
-import com.ppsi.kraftindo.fragment.FeedFragment;
+import com.ppsi.kraftindo.fragment.CartFragment;
 import com.ppsi.kraftindo.fragment.HomeFragment;
 import com.ppsi.kraftindo.fragment.ProfileFragment;
 
@@ -32,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
                         selectedFragment = new HomeFragment();
                         break;
                     case R.id.nav_feed:
-                        selectedFragment = new FeedFragment();
+                        selectedFragment = new CartFragment();
                         break;
                     case R.id.nav_profile:
                         selectedFragment = new ProfileFragment();
