@@ -50,6 +50,7 @@ public class ProdukAdapter extends RecyclerView.Adapter<ProdukAdapter.ProdukView
         holder.btnAddCart.setOnClickListener(v -> {
             CartFragment.cartNamaProduk = produk.getName();
             CartFragment.cartHargaProduk = produk.getHarga();
+            CartFragment.cartPhotoProduk = produk.getPhoto();
             Toast.makeText(v.getContext(), "Added to cart", Toast.LENGTH_SHORT).show();
         });
         holder.btnDetail.setOnClickListener(v -> {

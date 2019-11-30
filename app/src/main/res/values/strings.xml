@@ -24,5 +24,14 @@
         <item>Kuning</item>
         <item>Abu - Abu</item>
     </string-array>
+    <string-array name="kurir">
+        <item>JNE</item>
+        <item>JNT</item>
+        <item>TIKI</item>
+        <item>POS INDONESIA</item>
+    </string-array>
     <string name="lorem">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Eleifend quam adipiscing vitae proin sagittis nisl. Non arcu risus quis varius quam quisque id. Nunc consequat interdum varius sit amet mattis vulputate. In vitae turpis massa sed elementum tempus egestas sed sed. Semper feugiat nibh sed pulvinar proin gravida hendrerit. Tellus mauris a diam maecenas sed.</string>
+    <string name="deskrip_pembayaran">Silahkan transfer total belanja anda ke rekening dibawah ini :</string>
+    <string name="rekening">034101000743303</string>
+    <string name="deskrip_cara_pembayaran">Setelah melakukan Checkout Isi Data diri anda pada kolom Form dengan lengkap Transfer jumlah belanja anda ke rekening yang tertera Upload bukti pembayaran setelah melakukan transfer Tunggu konfirmasi pembayaran melalui email anda.</string>
 </resources>
