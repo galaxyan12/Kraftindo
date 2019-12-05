@@ -4,11 +4,19 @@
     <string name="detail">Detail</string>
     <string name="Buy">Buy</string>
     <string name="add_cart">Add to Cart</string>
+    <string-array name="gender">
+        <item>Laki - Laki</item>
+        <item>Perempuan</item>
+    </string-array>
     <string-array name="bentuk">
-        <item>Bulat</item>
-        <item>Persegi</item>
-        <item>Segitiga</item>
+        <item>Bunga</item>
+        <item>Fauna</item>
+        <item>Abstract</item>
         <item>Bintang</item>
+        <item>Ombak</item>
+        <item>Primitif</item>
+        <item>Klasik</item>
+        <item>Modern</item>
     </string-array>
     <string-array name="ukuran">
         <item>100cm x 150cm</item>
@@ -33,5 +41,5 @@
     <string name="lorem">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Eleifend quam adipiscing vitae proin sagittis nisl. Non arcu risus quis varius quam quisque id. Nunc consequat interdum varius sit amet mattis vulputate. In vitae turpis massa sed elementum tempus egestas sed sed. Semper feugiat nibh sed pulvinar proin gravida hendrerit. Tellus mauris a diam maecenas sed.</string>
     <string name="deskrip_pembayaran">Silahkan transfer total belanja anda ke rekening dibawah ini :</string>
     <string name="rekening">034101000743303</string>
-    <string name="deskrip_cara_pembayaran">Setelah melakukan Checkout Isi Data diri anda pada kolom Form dengan lengkap Transfer jumlah belanja anda ke rekening yang tertera Upload bukti pembayaran setelah melakukan transfer Tunggu konfirmasi pembayaran melalui email anda.</string>
+    <string name="deskrip_cara_pembayaran">Setelah melakukan Checkout Isi Data diri anda pada Form\nTransfer jumlah belanja anda ke rekening yang tertera\nUpload bukti pembayaran setelah melakukan transfer\nTunggu konfirmasi pembayaran melalui email anda.</string>
 </resources>

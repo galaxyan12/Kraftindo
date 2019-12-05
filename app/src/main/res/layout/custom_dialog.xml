@@ -40,7 +40,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="Bentuk Produk"
+        android:text="Ubah Corak"
         android:textSize="18sp"
         app:layout_constraintTop_toBottomOf="@+id/spinner_warna"
         tools:layout_editor_absoluteX="34dp" />

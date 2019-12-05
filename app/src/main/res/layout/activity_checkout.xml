@@ -90,6 +90,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="4dp"
+            android:singleLine="false"
             android:justificationMode="inter_word"
             android:text="@string/deskrip_cara_pembayaran" />
 

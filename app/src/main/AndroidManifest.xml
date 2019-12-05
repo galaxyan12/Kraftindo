@@ -12,20 +12,16 @@
         android:roundIcon="@mipmap/my_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".EditActivity"></activity>
         <activity
             android:name=".BuktiActivity"
-            android:theme="@style/AppTheme.MyNoActionBar"></activity>
+            android:theme="@style/AppTheme.MyNoActionBar" />
         <activity
             android:name=".CheckoutActivity"
             android:theme="@style/AppTheme.MyNoActionBar" />
         <activity
             android:name=".SplashActivity"
             android:theme="@style/Theme.AppCompat.NoActionBar">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
             android:name=".RegisterActivity"
@@ -36,7 +32,13 @@
         <activity android:name=".DetailActivity" />
         <activity
             android:name=".MainActivity"
-            android:theme="@style/AppTheme.MyNoActionBar" />
+            android:theme="@style/AppTheme.MyNoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>
